@@ -72,7 +72,7 @@ public class SecurityConfig {
 	        .build();
 	    userDetailsManager.createUser(userAdmin);
 	    UserDetails sampleUser = User.withUsername("EMPLOYEE")
-	        .password(passwordEncoder.encode("1234"))
+	        .password(passwordEncoder.encode(password))
 	        .roles("EMPLOYEE")
 	        .build();
 	    userDetailsManager.createUser(sampleUser);
